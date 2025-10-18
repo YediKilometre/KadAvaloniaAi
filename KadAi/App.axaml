@@ -1,0 +1,30 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:KadAi"
+             x:Class="KadAi.App"
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <FluentTheme />
+		<StyleInclude Source="avares://KadAi/Styles/AppDefaultStyles.axaml"></StyleInclude>
+    </Application.Styles>
+
+	<Application.Resources>
+		<SolidColorBrush x:Key="PrimaryForeground">#CFCFCF</SolidColorBrush>
+		<SolidColorBrush x:Key="PrimaryBackground">#14172D</SolidColorBrush>
+		<LinearGradientBrush x:Key="PrimaryBackgroundGradient" StartPoint="0%, 0%" EndPoint="100%, 0%">
+			<GradientStop Offset="0" Color="#111214"></GradientStop>
+			<GradientStop Offset="1" Color="#151E3E"></GradientStop>
+		</LinearGradientBrush>
+
+		<SolidColorBrush x:Key="PrimaryHoverBackground">#333B5A</SolidColorBrush>
+		<SolidColorBrush x:Key="PrimaryHoverForeground">White</SolidColorBrush>
+		
+	</Application.Resources>
+	
+</Application>
