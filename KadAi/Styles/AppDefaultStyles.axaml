@@ -1,23 +1,63 @@
 <Styles xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-	
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
 	<Design.PreviewWith>
 		<Border Padding="20" Background="{DynamicResource ResourceKey=PrimaryBackgroundGradient}">
 			<!-- Add Controls for Previewer Here -->
-			<Button Content="Hello" ></Button>
+			<StackPanel Orientation="Vertical">
+				<Button HorizontalAlignment="Stretch">
+					<StackPanel Orientation="Horizontal">
+						<!--<Image Source="{SvgImage /Assets/images/logo.svg}" Width="30"></Image>-->
+						<Label Classes="icon" Content="&#xE2C2;"/>
+						<Label Content="Home"></Label>
+					</StackPanel>
+				</Button>
+				<Button Grid.Row="1">
+					<Label Classes="icon-only" Content="&#xE272;"/>
+				</Button>
+				<Button Grid.Row="1" Classes="transparent">
+					<Label Classes="icon-only" Content="&#xE272;"/>
+				</Button>
+			</StackPanel>
 		</Border>
 	</Design.PreviewWith>
 
 	<!-- Add Styles Here -->
+	<Style Selector="Window">
+		<Setter Property="FontFamily" Value="{DynamicResource ResourceKey=AlioProBlackBlack}"></Setter>
+	</Style>
+
+	<Style Selector="Label.icon, Label.icon-only">
+		<Setter Property="FontFamily" Value="{DynamicResource ResourceKey=Phosphor}"></Setter>
+		<Setter Property="FontSize" Value="18"></Setter>
+		<Setter Property="Padding" Value="0 6.5 -0.4 3" ></Setter>
+		<Setter Property="Margin" Value="0 -2 5 0" ></Setter>
+	</Style>
+
+	<Style Selector="Label.icon-only">
+		<Setter Property="Margin" Value="-5 -15 -5 -10" ></Setter>
+	</Style>
+
+	<Style Selector="Label.akko">
+		<Setter Property="FontFamily" Value="{DynamicResource ResourceKey=Phosphor}"></Setter>
+		<Setter Property="Padding" Value="0 2.5 -0.4 3" ></Setter>
+	</Style>
+
+
 	<Style Selector="Button">
 		<Setter Property="FontSize" Value="20"></Setter>
+		<Setter Property="Padding" Value="10 12 10 12"></Setter>
 		<Setter Property="Foreground" Value="{DynamicResource ResourceKey=PrimaryForeground}"></Setter>
 		<Setter Property="Background" Value="{DynamicResource ResourceKey=PrimaryBackground}"></Setter>
+	</Style>
+
+	<Style Selector="Button.transparent">
+		<Setter Property="Background" Value="Transparent"></Setter>
 	</Style>
 
 	<Style Selector="Button:pointerover /template/ ContentPresenter">
 		<Setter Property="Foreground" Value="{DynamicResource ResourceKey=PrimaryHoverForeground}"></Setter>
 		<Setter Property="Background" Value="{DynamicResource ResourceKey=PrimaryHoverBackground}"></Setter>
 	</Style>
-	
+
 </Styles>

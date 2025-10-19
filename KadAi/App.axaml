@@ -24,6 +24,11 @@
 
 		<SolidColorBrush x:Key="PrimaryHoverBackground">#333B5A</SolidColorBrush>
 		<SolidColorBrush x:Key="PrimaryHoverForeground">White</SolidColorBrush>
+
+		<!--Fonts-->
+		<FontFamily x:Key="AlioProBlackBlack">/Assets/Fonts/AlioProBlack.ttf#Alio Pro Black</FontFamily>
+		<FontFamily x:Key="Phosphor">/Assets/Fonts/Phosphor.ttf#Phosphor</FontFamily>
+
 		
 	</Application.Resources>
 	
