@@ -19,37 +19,37 @@
 						<StackPanel Orientation="Horizontal">
 							<!--<Image Source="{SvgImage /Assets/images/logo.svg}" Width="30"></Image>-->
 							<Label Classes="icon" Content="&#xE2C2;"/>
-							<Label Content="Home"></Label>
+							<Label Classes="akko" Content="Home"></Label>
 						</StackPanel>
 					</Button>
 					<Button HorizontalAlignment="Stretch">
 						<StackPanel Orientation="Horizontal">
 							<Label Classes="icon" Content="&#xE346;"/>
-							<Label Content="Process"></Label>
+							<Label Classes="akko" Content="Process"></Label>
 						</StackPanel>
 					</Button>
 					<Button HorizontalAlignment="Stretch">
 						<StackPanel Orientation="Horizontal">
 							<Label Classes="icon" Content="&#xE7F2;"/>
-							<Label Content="Actions"></Label>
+							<Label Classes="akko" Content="Actions"></Label>
 						</StackPanel>
 					</Button>
 					<Button HorizontalAlignment="Stretch">
 						<StackPanel Orientation="Horizontal">
 							<Label Classes="icon" Content="&#xE3EE;"/>
-							<Label Content="Macros"></Label>
+							<Label Classes="akko" Content="Macros"></Label>
 						</StackPanel>
 					</Button>
 					<Button HorizontalAlignment="Stretch">
 						<StackPanel Orientation="Horizontal">
 							<Label Classes="icon" Content="&#xEB7A;"/>
-							<Label Content="Reporter"></Label>
+							<Label Classes="akko" Content="Reporter"></Label>
 						</StackPanel>
 					</Button>
 					<Button HorizontalAlignment="Stretch">
 						<StackPanel Orientation="Horizontal">
 							<Label Classes="icon" Content="&#xE03A;"/>
-							<Label Content="History"></Label>
+							<Label Classes="akko" Content="History"></Label>
 						</StackPanel>
 					</Button>
 				</StackPanel>
