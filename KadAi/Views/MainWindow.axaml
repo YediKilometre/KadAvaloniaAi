@@ -1,55 +1,69 @@
+<!--x:DataType="vm:MainViewModel" ile Preview görünümünde Mvvm baðlamasýný yaptý -->
+
 <Window xmlns="https://github.com/avaloniaui"
-		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-		xmlns:vm="using:KadAi.ViewModels"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"		
 		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-		xmlns:views="clr-namespace:KadAi.Views"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"		
 		mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="600"
-		x:Class="KadAi.Views.MainWindow"
+		x:Class="KadAi.Views.MainWindow"	
+		xmlns:vm="using:KadAi.ViewModels"
+		x:DataType="vm:MainViewModel" 
+		xmlns:views="clr-namespace:KadAi.Views"
 		Icon="/Assets/avalonia-logo.ico"
 		Title="KadAi">
+
+<!--	<Window.DataContext>
+		<vm:MainViewModel></vm:MainViewModel>
+	</Window.DataContext>-->
+	<Design.DataContext>
+		<vm:MainViewModel></vm:MainViewModel>
+	</Design.DataContext>
 
 	<Grid Background="{DynamicResource ResourceKey=PrimaryBackground}" ColumnDefinitions="Auto, *">
 		<Border Padding="20" Background="{DynamicResource ResourceKey=PrimaryBackgroundGradient}">
 			<Grid RowDefinitions="*, Auto">
 				<StackPanel Spacing="5" >
-					<Image Source="{SvgImage /Assets/images/logo.svg}" Width="220" Height="75"></Image>
+					
+					<!--<Image Source="{SvgImage /Assets/images/logo.svg}" Width="220" Height="75"></Image>-->
+					<!--<Image PointerPressed="Image_PointerPressed"  Source="{Binding SideMenuImage}" Width="220" Height="75"></Image>-->
+					<Image PointerPressed="Image_PointerPressed"  Source="{SvgImage /Assets/images/icon.svg}" Width="220" Height="75" IsVisible="{Binding SideMenuExpanded}"></Image>
+					<Image PointerPressed="Image_PointerPressed"  Source="{SvgImage /Assets/images/logo.svg}" Width="22" Height="75" IsVisible="{Binding !SideMenuExpanded}"></Image>
 
 					<Button HorizontalAlignment="Stretch">
 						<StackPanel Orientation="Horizontal">
 							<!--<Image Source="{SvgImage /Assets/images/logo.svg}" Width="30"></Image>-->
 							<Label Classes="icon" Content="&#xE2C2;"/>
-							<Label Classes="akko" Content="Home"></Label>
+							<Label Classes="akko" Content="Home" IsVisible="{Binding SideMenuExpanded}"></Label>
 						</StackPanel>
 					</Button>
 					<Button HorizontalAlignment="Stretch">
 						<StackPanel Orientation="Horizontal">
 							<Label Classes="icon" Content="&#xE346;"/>
-							<Label Classes="akko" Content="Process"></Label>
+							<Label Classes="akko" Content="Process" IsVisible="{Binding SideMenuExpanded}"></Label>
 						</StackPanel>
 					</Button>
 					<Button HorizontalAlignment="Stretch">
 						<StackPanel Orientation="Horizontal">
 							<Label Classes="icon" Content="&#xE7F2;"/>
-							<Label Classes="akko" Content="Actions"></Label>
+							<Label Classes="akko" Content="Actions" IsVisible="{Binding SideMenuExpanded}"></Label>
 						</StackPanel>
 					</Button>
 					<Button HorizontalAlignment="Stretch">
 						<StackPanel Orientation="Horizontal">
 							<Label Classes="icon" Content="&#xE3EE;"/>
-							<Label Classes="akko" Content="Macros"></Label>
+							<Label Classes="akko" Content="Macros" IsVisible="{Binding SideMenuExpanded}"></Label>
 						</StackPanel>
 					</Button>
 					<Button HorizontalAlignment="Stretch">
 						<StackPanel Orientation="Horizontal">
 							<Label Classes="icon" Content="&#xEB7A;"/>
-							<Label Classes="akko" Content="Reporter"></Label>
+							<Label Classes="akko" Content="Reporter" IsVisible="{Binding SideMenuExpanded}"></Label>
 						</StackPanel>
 					</Button>
 					<Button HorizontalAlignment="Stretch">
 						<StackPanel Orientation="Horizontal">
 							<Label Classes="icon" Content="&#xE03A;"/>
-							<Label Classes="akko" Content="History"></Label>
+							<Label Classes="akko" Content="History" IsVisible="{Binding SideMenuExpanded}"></Label>
 						</StackPanel>
 					</Button>
 				</StackPanel>

@@ -2,20 +2,29 @@
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
 	<Design.PreviewWith>
-		<Border Padding="20" Background="{DynamicResource ResourceKey=PrimaryBackgroundGradient}">
+		<Border Padding="20" Background="{DynamicResource ResourceKey=PrimaryBackgroundGradient}" Width="200">
 			<!-- Add Controls for Previewer Here -->
 			<StackPanel Orientation="Vertical">
+
+				<Button Content="Home"></Button>
+
+				<Button>
+					<Label Classes="akko" Content="Home"></Label>
+				</Button>
+
 				<Button HorizontalAlignment="Stretch">
 					<StackPanel Orientation="Horizontal">
 						<!--<Image Source="{SvgImage /Assets/images/logo.svg}" Width="30"></Image>-->
 						<Label Classes="icon" Content="&#xE2C2;"/>
-						<Label Content="Home"></Label>
+						<Label Classes="akko" Content="Home"></Label>
 					</StackPanel>
 				</Button>
+
 				<Button Grid.Row="1">
 					<Label Classes="icon-only" Content="&#xE272;"/>
 				</Button>
-				<Button Grid.Row="1" Classes="transparent">
+
+				<Button Classes="transparent">
 					<Label Classes="icon-only" Content="&#xE272;"/>
 				</Button>
 			</StackPanel>
@@ -24,12 +33,20 @@
 
 	<!-- Add Styles Here -->
 	<Style Selector="Window">
-		<Setter Property="FontFamily" Value="{DynamicResource ResourceKey=AlioProBlackBlack}"></Setter>
+		<!--<Setter Property="FontFamily" Value="{DynamicResource ResourceKey=AlioProBlackBlack}"></Setter>-->
+	</Style>
+
+	<Style Selector="Border">
+		<Setter Property="Transitions">
+			<Transitions>
+				<DoubleTransition Property="Width" Duration="0:0:1"></DoubleTransition>
+			</Transitions>
+		</Setter>
 	</Style>
 
 	<Style Selector="Label.icon, Label.icon-only">
 		<Setter Property="FontFamily" Value="{DynamicResource ResourceKey=Phosphor}"></Setter>
-		<Setter Property="FontSize" Value="18"></Setter>
+		<Setter Property="FontSize" Value="19"></Setter>
 		<Setter Property="Padding" Value="0 6.5 -0.4 3" ></Setter>
 		<Setter Property="Margin" Value="0 -2 5 0" ></Setter>
 	</Style>
@@ -69,8 +86,8 @@
 	</Style>
 
 	<Style Selector="Button.transparent">
-		<Setter Property="Background" Value="Transparent"></Setter>		
-	</Style>
+		<Setter Property="Background" Value="Transparent"></Setter>
+</Style>
 
 	<Style Selector="Button.transparent:pointerover /template/ ContentPresenter">
 		<Setter Property="RenderTransform" Value="scale(1.2)"></Setter>

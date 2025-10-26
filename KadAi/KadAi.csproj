@@ -19,7 +19,14 @@
       <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
       <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="CommunityToolkit.Mvvm" />
     <PackageReference Include="ReactiveUI.Avalonia" />
     <PackageReference Include="Svg.Controls.Skia.Avalonia" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\UserView.axaml.cs">
+      <DependentUpon>UserView.axaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

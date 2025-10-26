@@ -2,9 +2,9 @@ using Avalonia.Controls;
 
 namespace KadAi.Views;
 
-public partial class MainView : UserControl
+public partial class UserView : UserControl
 {
-    public MainView()
+    public UserView()
     {
         InitializeComponent();
     }
