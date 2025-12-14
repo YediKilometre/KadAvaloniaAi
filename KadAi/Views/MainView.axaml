@@ -2,24 +2,28 @@
 
 <Window xmlns="https://github.com/avaloniaui"
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"		
-		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"        
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"		
 		mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="600"
-		x:Class="KadAi.Views.MainWindow"	
+		x:Class="KadAi.Views.MainView"					
+		xmlns:kadai="using:KadAi"
 		xmlns:vm="using:KadAi.ViewModels"
-		x:DataType="vm:MainViewModel" 
-		xmlns:views="clr-namespace:KadAi.Views"
+		xmlns:view="using:KadAi.Views"
+		x:DataType="vm:MainViewModel"
 		Icon="/Assets/avalonia-logo.ico"
 		Title="KadAi">
 
 <!--	<Window.DataContext>
 		<vm:MainViewModel></vm:MainViewModel>
 	</Window.DataContext>-->
-	<Design.DataContext>
+<!--	<Design.DataContext>
 		<vm:MainViewModel></vm:MainViewModel>
-	</Design.DataContext>
+	</Design.DataContext>-->
 
 	<Grid Background="{DynamicResource ResourceKey=PrimaryBackground}" ColumnDefinitions="Auto, *">
+
+		<ContentControl Grid.Column="1"> <view:HomePageView /> </ContentControl>
+
 		<Border Padding="20" Background="{DynamicResource ResourceKey=PrimaryBackgroundGradient}">
 			<Grid RowDefinitions="*, Auto">
 				<StackPanel Spacing="5" >
